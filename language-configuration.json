@@ -1,0 +1,23 @@
+{
+    "comments": {
+        "lineComment": "#"
+    },
+    "brackets": [
+        ["(", ")"]
+    ],
+    "autoClosingPairs": [
+        ["\"", "\""],
+        ["(", ")"],
+        ["%pre", "%end"],
+        ["%post", "%end"],
+        ["%packages", "%end"],
+        ["%addon", "%end"],
+        ["%anaconda", "%end"],
+        ["%pwpolicy", "%end"],
+        ["%traceback", "%end"]
+    ],
+    "surroundingPairs": [
+        ["\"", "\""],
+        ["(", ")"]
+    ]
+}

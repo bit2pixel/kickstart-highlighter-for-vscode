@@ -1,0 +1,28 @@
+{
+  "author": {
+    "name": "Renan Cakirerk"
+  },
+  "name": "kickstart",
+  "displayName": "Kickstart Syntax Highlighter",
+  "description": "Kickstart syntax highlighting for VSCode",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ks",
+      "aliases": ["Kickstart", "ks"],
+      "extensions": [".ks"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ks",
+      "scopeName": "source.ks",
+      "path": "./syntaxes/ks.tmLanguage.json"
+    }]
+  }
+}

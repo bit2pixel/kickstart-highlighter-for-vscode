@@ -1,0 +1,168 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Kickstart",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#options"
+		},
+		{
+			"include": "#sections"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#commands"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "^#.*$"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"match": "\\b(if|else|fi|while|do|done|for|in|break|continue)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted",
+			"begin": "\"|'",
+			"end": "\"|'",
+			"patterns": [
+				{
+					"name": "constant.character.escape",
+					"match": "\\\\."
+				}
+			]
+		},
+		"commands": {
+			"patterns": [
+				{
+					"name": "keyword.command",
+					"match": "\\b(autopart|autostep|auth|authconfig|authselect|bootloader|btrfs|cdrom|clearpart|cmdline|device|deviceprobe|driverdisk|eula|fcoe|firewall|firstboot|group|halt|harddrive|ignoredisk|install|interactive|iscsi|iscsiname|keyboard|lang|logging|liveimg|logvol|mediacheck|method|monitor|multipath|network|nfs|nfs41|ostreesetup|part|poweroff|raid|realm|reboot|repo|reqpart|rootpw|selinux|services|shutdown|skipx|sshpw|text|timezone|upgrade|url|user|useradd|vnc|volgroup|zerombr|zfcp)\\b"
+				}
+			]
+		},
+		"options": {
+			"patterns": [
+				{
+					"name": "entity.other.attribute-name",
+					"match": "--[a-zA-Z0-9-]+(?!\\w)"
+				},
+				{
+					"name": "keyword.operator",
+					"match": "="
+				}
+			]
+		},
+		"sections": {
+			"patterns": [
+				{
+					"name": "keyword.section",
+					"begin": "^%post\\b",
+					"end": "^%end",
+					"contentName": "source.post.ks",
+					"patterns": [
+						{
+							"include": "source.shell"
+						},
+						{
+							"name": "keyword.section",
+							"match": "^%post\\b"
+						},
+						{
+							"name": "keyword.section.end",
+							"match": "^%end\\b"
+						},
+						{
+							"name": "entity.other.attribute-name",
+							"match": "--[a-zA-Z0-9-]+(?!\\w)"
+						},
+						{
+							"name": "keyword.operator",
+							"match": "="
+						}
+					]
+				},
+				{
+					"name": "keyword.section",
+					"begin": "^%anaconda\\b",
+					"end": "^%end",
+					"contentName": "source.anaconda.ks",
+					"patterns": [
+						{
+							"include": "source.shell"
+						},
+						{
+							"name": "keyword.section",
+							"match": "^%anaconda\\b"
+						},
+						{
+							"name": "keyword.section.end",
+							"match": "^%end\\b"
+						},
+						{
+							"name": "entity.other.attribute-name",
+							"match": "--[a-zA-Z0-9-]+(?!\\w)"
+						},
+						{
+							"name": "keyword.operator",
+							"match": "="
+						}
+					]
+				},
+				{
+					"name": "keyword.section",
+					"begin": "^%packages\\b",
+					"end": "^%end",
+					"contentName": "entity.other.attribute-name",
+					"patterns": [
+						{
+							"name": "comment.line",
+							"match": "^#.*$"
+						},
+						{
+							"name": "entity.other.attribute-name",
+							"match": "^@.*$"
+						},
+						{
+							"name": "invalid",
+							"match": "^-.*$"
+						},
+						{
+							"name": "keyword.section",
+							"match": "^%packages\\b"
+						},
+						{
+							"name": "keyword.section.end",
+							"match": "^%end\\b"
+						}
+					]
+				},
+				{
+					"name": "keyword.section",
+					"match": "^%(pre|post|addon|anaconda|pwpolicy|traceback)\\b"
+				},
+				{
+					"name": "keyword.section.end",
+					"match": "^%end\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.ks"
+}
