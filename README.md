@@ -19,7 +19,7 @@ Upon installing this plugin, files with the `.ks` extension will be automaticall
 
 This screenshot was taken with <a href="https://marketplace.visualstudio.com/items?itemName=alexanderte.dainty-vscode">Dainty - Mirage</a> theme.
 
-<img src="images/screenshot.png" width="640"></img>
+<img src="https://raw.githubusercontent.com/bit2pixel/kickstart-highlighter-for-vscode/main/images/screenshot.png" width="640"></img>
 
 ## Release Notes
 
