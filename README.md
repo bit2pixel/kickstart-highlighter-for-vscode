@@ -1,6 +1,6 @@
 # Kickstart Syntax Highlighter for VSCode
 
-<center><img src="https://raw.githubusercontent.com/bit2pixel/kickstart-highlighter-for-vscode/main/images/kickstart-logo-large.png"></img></center>
+<center><img src="https://raw.githubusercontent.com/bit2pixel/kickstart-highlighter-for-vscode/main/images/kickstart-logo-banner.png"></img></center>
 
 Kickstart provides an automated installation method for Fedora, RHEL, Rocky, Almalinux, ..., etc. using a central configuration file.
 
