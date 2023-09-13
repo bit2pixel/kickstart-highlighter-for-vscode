@@ -2,32 +2,43 @@
   "author": {
     "name": "Renan Cakirerk"
   },
-  "name": "kickstart",
-  "displayName": "Kickstart Syntax Highlighter",
-  "description": "Kickstart syntax highlighting for VSCode",
-  "version": "1.0.0",
-  "engines": {
-    "vscode": "^1.82.0"
-  },
   "categories": [
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "ks",
-      "aliases": ["Kickstart", "ks"],
-      "extensions": [".ks"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "ks",
-      "scopeName": "source.ks",
-      "path": "./syntaxes/ks.tmLanguage.json"
-    }]
+    "grammars": [
+      {
+        "language": "ks",
+        "path": "./syntaxes/ks.tmLanguage.json",
+        "scopeName": "source.ks"
+      }
+    ],
+    "languages": [
+      {
+        "aliases": [
+          "Kickstart",
+          "ks"
+        ],
+        "configuration": "./language-configuration.json",
+        "extensions": [
+          ".ks"
+        ],
+        "id": "ks"
+      }
+    ]
   },
+  "description": "Kickstart syntax highlighter for VSCode",
+  "displayName": "Kickstart Syntax Highlighter",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "icon": "images/kickstart-logo.png",
+  "license": "MIT",
+  "name": "kickstart-highlighter",
+  "publisher": "bit2pixel",
   "repository": {
     "type": "git",
     "url": "https://github.com/bit2pixel/kickstart-highlighter-for-vscode.git"
   },
-  "icon": "images/kickstart-logo.png"
+  "version": "1.0.0"
 }
