@@ -13,6 +13,10 @@ This plugin brings syntax highlighting to <a href="https://pykickstart.readthedo
 - Distinct color schemes for packages slated for installation and removal.
 - Smart closure for sections including `pre`, `post`, `packages`, `addon`, and `anaconda`.
 
+# Installation
+
+Vist <a href="https://marketplace.visualstudio.com/items?itemName=bit2pixel.kickstart-highlighter">Kickstart Syntax Highlighter for VSCode</a> on VSCode Marketplace.
+
 ## How to Use It
 
 Upon installing this plugin, files with the `.ks` extension will be automatically highlighted. If you use `.cfg ` extensions for your Kickstart files, ensure you change the highlighter from `Change Language Mode` menu in VSCode.
