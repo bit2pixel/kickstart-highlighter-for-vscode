@@ -28,5 +28,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/bit2pixel/kickstart-highlighter-for-vscode.git"
-  }
+  },
+  "icon": "images/kickstart-logo.png"
 }

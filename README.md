@@ -1,5 +1,7 @@
 # Kickstart Syntax Highlighter for VSCode
 
+<center><img src="https://raw.githubusercontent.com/bit2pixel/kickstart-highlighter-for-vscode/main/images/kickstart-logo-large.png"></img></center>
+
 Kickstart provides an automated installation method for Fedora, RHEL, Rocky, Almalinux, ..., etc. using a central configuration file.
 
 This plugin brings syntax highlighting to <a href="https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html">Kickstart</a> files in Visual Studio Code, aiming to make reading and editing these files a bit clearer. Ideal for those familiar with Kickstart's automated setup processes.
